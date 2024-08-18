@@ -1,0 +1,13 @@
+.py-20 {
+  padding: 20px 0;
+}
+#test {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(156, 226, 26, 0.7);
+}
+#bg {
+  width: 200px;
+  height: 100px;
+  background: rgba(168, 211, 67, 0.833);
+}

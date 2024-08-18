@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- 1. Input -->
+    <div class="container1 py-20">
+        <label>
+            <input type="checkbox" id="checkbox" onchange="checkBox()">
+            Input
+        </label>
+        <br>
+        <br>
+        <input type="radio" name="r1" value="1">1
+        <input type="radio" name="r1" value="12">2
+        <input type="radio" name="r1" value="123">3
+        <button onclick="checkRadios()">Проверить</button>
+    </div>
+
+    <!-- 2. Работаем с селектом -->
+    <div class="container2 py-20">
+        <select name="" id="mySelect" onchange="mySelect()">
+            <option value="">Apple</option>
+            <option value="">Orange</option>
+            <option value="">Pineapple</option>
+            <option value="">Banana</option>
+        </select>
+        <br>
+        <br>
+        <input type="range" min="0" max="100" step="1" oninput="myRange()" id="myRange">
+        <input type="text" id="myText"></input>
+        <div id="test"></div>
+    </div>
+
+    <!-- 3. Пишем свой CSS генератор -->
+    <div class="container3  py-20">
+        <div id="block1">
+            <p>left top
+                <input type="range" min="0" max="100" value="0" oninput="myContainer3()" id="myRange1">
+                <input type="text" id="myText1" value="0"></input>
+            </p>
+            <p>right top
+                <input type="range" min="0" max="100" value="0" oninput="myContainer3()" id="myRange2">
+                <input type="text" id="myText2" value="0"></input>
+            </p>
+            <p>bottom left
+                <input type="range" min="0" max="100" value="0" oninput="myContainer3()" id="myRange3">
+                <input type="text" id="myText3" value="0"></input>
+            </p>
+            <p>bottom right
+                <input type="range" min="0" max="100" value="0" oninput="myContainer3()" id="myRange4">
+                <input type="text" id="myText4" value="0"></input>
+            </p>
+            <div id="bg"></div>
+        </div>
+
+    </div>
+
+    <!-- 4. Пишем выпадающее меню -->
+    <div class="container4 py-20" >
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
