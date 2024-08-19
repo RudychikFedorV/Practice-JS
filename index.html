@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>JS</title>
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <!-- 1. Input -->
     <div class="container1 py-20">
@@ -60,12 +62,61 @@
         </div>
 
     </div>
-
+    <!-- 
+    https://www.youtube.com/playlist?list=PLVfMKQXDAhGW0p_BEEe47UkCgNoS_dyki
+ -->
     <!-- 4. Пишем выпадающее меню -->
-    <div class="container4 py-20" >
+    <div class="container4 py-20">
+        <nav class="nav d-flex">
+            <div class="mav-item">Меню 1
+                <div class="sub-menu"> Подменю 1 </div>
+            </div>
+            <div class="mav-item">Меню 2
+                <div class="sub-menu"> Подменю 2 </div>
+            </div>
+            <div class="mav-item">Меню 3
+                <div class="sub-menu"> Подменю 3 </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- 5. Делаем вкладки табы (Tabs) -->
+    <div class="container5 py-20">
+        <div class="tabs">
+            <div class="tab tab-1">tab 1</div>
+            <div class="tab">tab 2</div>
+            <div class="tab">tab 3</div>
+            <div class="content">content 1</div>
+            <div class="content">content 2</div>
+            <div class="content">content 3</div>
+        </div>
+    </div>
+
+    <!-- 6. Учимся делать модальные окна -->
+    <div class="container6 py-20">
+        <button id="myBtn">Open modal</button>
+        <div id="myMod" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Modal window</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. Анимация в js -->
+    <div class="container7 py-20">
+        <button onclick="container7()">Animation</button>
+        <div id="myContainer">
+            <div id="myAnimation"></div>
+        </div>
+    </div>
+
+    <!-- 8. Как сделать слайдер (Carousel) -->
+    <div class="container8  py-20">
 
     </div>
 
     <script src="main.js"></script>
 </body>
+
 </html>

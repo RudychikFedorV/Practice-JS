@@ -61,3 +61,102 @@ const myContainer3 = () => {
 };
 
 // 4. Пишем выпадающее меню
+document.querySelector(".nav").onmouseover = (event) => {
+  const target = event.target;
+  if (target.className == "mav-item") {
+    const s = target.querySelectorAll(".sub-menu");
+    closeMenu();
+    s[0].style.display = "block";
+  }
+};
+
+document.onmouseover = (event) => {
+  const target = event.target;
+  if (target.className != "mav-item" && target.className != "sub-menu") {
+    closeMenu();
+  }
+};
+
+const closeMenu = () => {
+  const nav = document.querySelector(".nav");
+  const sumb = document.querySelectorAll(".sub-menu");
+  for (let i = 0; i < sumb.length; i++) {
+    sumb[i].style.display = "none";
+  }
+};
+
+// 5. Делаем вкладки табы (Tabs)
+const tabsItems = () => {
+  let tab;
+  let content;
+
+  window.onload = () => {
+    tab = document.getElementsByClassName("tab");
+    content = document.getElementsByClassName("content");
+    hideTabsContent(1);
+  };
+  const hideTabsContent = (a) => {
+    for (let index = a; index < content.length; index++) {
+      content[index].classList.remove("show");
+      content[index].classList.add("hide");
+      tab[index].classList.remove("tab-1");
+    }
+  };
+  document.querySelector(".tabs").onclick = (event) => {
+    const target = event.target;
+    if (target.className == "tab") {
+      for (let index = 0; index < tab.length; index++) {
+        if (target == tab[index]) {
+          showTabsContent(index);
+          break;
+        }
+      }
+    }
+  };
+  const showTabsContent = (b) => {
+    if (content[b].classList.contains("hide")) {
+      hideTabsContent(0);
+      tab[b].classList.add("tab-1");
+      content[b].classList.remove("hide");
+      content[b].classList.add("show");
+    }
+  };
+};
+tabsItems();
+
+// 6. Учимся делать модальные окна
+const container6 = () => {
+  const myMod = document.querySelector("#myMod");
+  const myBtn = document.querySelector("#myBtn");
+  const spanClose = document.querySelector(".close");
+
+  myBtn.onclick = () => {
+    myMod.style.display = "block";
+  };
+  spanClose.onclick = () => {
+    myMod.style.display = "none";
+  };
+  window.onclick = (event) => {
+    if (event.target == myMod) {
+      myMod.style.display = "none";
+    }
+  };
+};
+container6();
+
+// 7. Анимация в js
+const container7 = () => {
+  const myAnimation = document.querySelector("#myAnimation");
+  let pos = 0;
+  const id = setInterval(() => {
+    if (pos == 220) {
+      clearInterval(id);
+    } else {
+      pos++;
+      myAnimation.style.top = pos + "px";
+      myAnimation.style.left = pos + "px";
+    }
+  }, 10);
+};
+
+// 8. Как сделать слайдер (Carousel)
