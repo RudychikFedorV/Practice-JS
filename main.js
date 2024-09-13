@@ -160,3 +160,34 @@ const container7 = () => {
 };
 
 // 8. Как сделать слайдер (Carousel)
+let slideIndex = 1;
+
+const plusSlides = (n) => {
+  showSlides((slideIndex += n));
+};
+const currentSlide = (n) => {
+  showSlides((slideIndex = n));
+};
+const showSlides = (n) => {
+  let index;
+  const slides = document.getElementsByClassName("mySlider");
+  const dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (let index = 0; index < slides.length; index++) {
+    slides[index].style.display = "none";
+  }
+  for (let index = 0; index < dots.length; index++) {
+    dots[index].className = dots[index].className.replace("active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+};
+showSlides(slideIndex);
+
