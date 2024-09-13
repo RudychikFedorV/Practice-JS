@@ -191,3 +191,21 @@ const showSlides = (n) => {
 };
 showSlides(slideIndex);
 
+// 9 Как сделать Фильтрацию на сайт
+const myFunc = () => {
+  let a;
+  let index;
+  let input = document.querySelector("#myInput");
+  let filter = input.value.toUpperCase();
+  let ul = document.querySelector("#myUl");
+  let li = ul.getElementsByTagName("li");
+ 
+  for (let index = 0; index < li.length; index++) {
+    a = li[index].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[index].style.display = "";
+    } else {
+      li[index].style.display = "none";
+    }
+  }
+};

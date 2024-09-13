@@ -119,13 +119,13 @@
   position: relative;
   margin-inline: auto;
 }
-.fade-img{
+.fade-img {
   max-width: 1000px;
   max-height: 500px;
- border-radius: 10px;
- overflow: hidden;
+  border-radius: 10px;
+  overflow: hidden;
 }
-.fade-img img{
+.fade-img img {
   display: block;
   object-fit: cover;
   width: 100%;
@@ -154,7 +154,7 @@
   right: 10px;
   border-radius: 3px 0 0 3px;
 }
-.numbertxt{
+.numbertxt {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -204,4 +204,34 @@
   to {
     opacity: 1;
   }
+}
+
+/* 9 Как сделать Фильтрацию на сайт */
+#myInput {
+  width: 50%;
+  font-size: 16px;
+  padding: 12px 20px 12px 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 10px;
+}
+#myUl {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header {
+  font-size: 20px;
+  color: #000;
+}
+#myUl li a {
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+  display: block;
+  border-radius: 10px;
 }
