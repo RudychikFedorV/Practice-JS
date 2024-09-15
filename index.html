@@ -112,7 +112,7 @@
     </div>
 
     <!-- 8. Как сделать слайдер (Carousel) -->
-    <div class="container8  py-20">
+    <div class="container8 py-20">
         <div class="slider-container">
             <div class="mySlider fade">
                 <div class="numbertxt">1/3</div>
@@ -160,6 +160,43 @@
         </ul>
     </div>
 
+    <!-- 10 Делаем калькулятор -->
+    <div class="container10 py-20">
+        <p>Число 1 <input type="text" id="n1"></p>
+        <p>Число 2 <input type="text" id="n2"></p>
+
+        <button onclick="plus()">+</button>
+        <button onclick="minus()">-</button>
+        <button onclick="multiplication()">*</button>
+        <button onclick="division()">/</button>
+        <button onclick="power()">**</button>
+
+        <hr>
+        <p id="out">Ответ: </p>
+    </div>
+    <div class="container10 py-20">
+        <p>Число 11 <input type="text" id="n11"></p>
+        <p>Число 12 <input type="text" id="n12"></p>
+
+        <button onclick="plus1()">+</button>
+        <button onclick="minus1()">-</button>
+        <button onclick="multiplication1()">*</button>
+        <button onclick="division1()">/</button>
+        <button onclick="power1()">**</button>
+
+        <hr>
+        <p id="out1">Ответ: </p>
+    </div>
+
+    <!-- 12 Модальные изображения -->
+    <div class="container12 py-20">
+        <img src="./img/b-02.jpg" alt="Img-01" id="myImg12" width="300" height="200">
+        <div id="myModal12" class="modal12">
+            <span class="close12" onclick="document.getElementById('myModal12').style.display = 'none'">&times;</span>
+            <img class="modal-content12" id="img12">
+            <div id="caption12"></div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 

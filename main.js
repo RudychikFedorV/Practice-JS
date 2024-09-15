@@ -199,7 +199,7 @@ const myFunc = () => {
   let filter = input.value.toUpperCase();
   let ul = document.querySelector("#myUl");
   let li = ul.getElementsByTagName("li");
- 
+
   for (let index = 0; index < li.length; index++) {
     a = li[index].getElementsByTagName("a")[0];
     if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -208,4 +208,132 @@ const myFunc = () => {
       li[index].style.display = "none";
     }
   }
+};
+
+// 10 Делаем калькулятор
+function plus() {
+  let num1, num2, result;
+
+  num1 = document.querySelector("#n1").value;
+  num1 = parseInt(num1);
+
+  num2 = document.querySelector("#n2").value;
+  num2 = parseInt(num2);
+
+  result = num1 + num2;
+
+  document.querySelector("#out").innerHTML = result;
+}
+function minus() {
+  let num1, num2, result;
+
+  num1 = document.querySelector("#n1").value;
+  num1 = parseInt(num1);
+
+  num2 = document.querySelector("#n2").value;
+  num2 = parseInt(num2);
+
+  result = num1 - num2;
+
+  document.querySelector("#out").innerHTML = result;
+}
+function multiplication() {
+  let num1, num2, result;
+
+  num1 = document.querySelector("#n1").value;
+  num1 = parseInt(num1);
+
+  num2 = document.querySelector("#n2").value;
+  num2 = parseInt(num2);
+
+  result = num1 * num2;
+
+  document.querySelector("#out").innerHTML = result;
+}
+function separation() {
+  let num1, num2, result;
+
+  num1 = document.querySelector("#n1").value;
+  num1 = parseInt(num1);
+
+  num2 = document.querySelector("#n2").value;
+  num2 = parseInt(num2);
+
+  result = num1 / num2;
+
+  document.querySelector("#out").innerHTML = result;
+}
+function degree() {
+  let num1, num2, result;
+
+  num1 = document.querySelector("#n1").value;
+  num1 = parseInt(num1);
+
+  num2 = document.querySelector("#n2").value;
+  num2 = parseInt(num2);
+
+  result = num1 ** num2;
+
+  document.querySelector("#out").innerHTML = result;
+}
+
+// оптимизация кода Сalculate (switch)
+function calculate(operation) {
+  let num11 = parseInt(document.querySelector("#n11").value);
+  let num12 = parseInt(document.querySelector("#n12").value);
+  let result;
+
+  switch (operation) {
+    case "plus":
+      result = num11 + num12;
+      break;
+    case "minus":
+      result = num11 - num12;
+      break;
+    case "multiplication":
+      result = num11 * num12;
+      break;
+    case "division":
+      result = num11 / num12;
+      break;
+    case "power":
+      result = num11 ** num12;
+      break;
+    default:
+      result = "Unknown operation";
+  }
+
+  document.querySelector("#out1").innerHTML = result;
+}
+function plus1() {
+  calculate("plus");
+}
+function minus1() {
+  calculate("minus");
+}
+function multiplication1() {
+  calculate("multiplication");
+}
+function division1() {
+  calculate("division");
+}
+function power1() {
+  calculate("power");
+}
+
+// 12 Модальные изображения
+const modal12 = document.getElementById("myModal12");
+const img12 = document.getElementById("myImg12");
+const modalImg12 = document.getElementById("img12");
+const captionText12 = document.getElementById("caption12");
+
+img12.onclick = function() {
+  modal12.style.display = "block";
+  modalImg12.src = this.src;
+  captionText12.innerHTML = this.alt;
+};
+
+const span12 = document.getElementsByClassName("close12")[0];
+span12.onclick = function() {
+  modal12.style.display = "none";
 };
