@@ -250,7 +250,7 @@ function multiplication() {
 
   document.querySelector("#out").innerHTML = result;
 }
-function separation() {
+function division() {
   let num1, num2, result;
 
   num1 = document.querySelector("#n1").value;
@@ -263,7 +263,7 @@ function separation() {
 
   document.querySelector("#out").innerHTML = result;
 }
-function degree() {
+function power() {
   let num1, num2, result;
 
   num1 = document.querySelector("#n1").value;
@@ -327,13 +327,55 @@ const img12 = document.getElementById("myImg12");
 const modalImg12 = document.getElementById("img12");
 const captionText12 = document.getElementById("caption12");
 
-img12.onclick = function() {
+img12.onclick = function () {
   modal12.style.display = "block";
   modalImg12.src = this.src;
   captionText12.innerHTML = this.alt;
 };
 
 const span12 = document.getElementsByClassName("close12")[0];
-span12.onclick = function() {
+span12.onclick = function () {
   modal12.style.display = "none";
 };
+
+// 13 Прогресс бар
+const move = () => {
+  const myBar = document.querySelector("#myBar");
+  const label = document.querySelector("#label");
+  let width = 10;
+  const id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      myBar.style.width = width + "%";
+      label.innerHTML = width * 1 + "%";
+    }
+  }
+};
+
+// 14 Как сделать Popup
+const myFunction = () => {
+  const myPopup = document.querySelector("#myPopup");
+  myPopup.classList.toggle("show");
+};
+
+// 15 Accordion
+const accordion = document.querySelectorAll(".accordion");
+let index;
+
+for (let index = 0; index < accordion.length; index++) {
+  accordion[index].onclick = function () {
+    this.classList.toggle("active");
+    this.nextElementSibling.classList.toggle("show");
+  };
+}
+
+// 16 Простой Конвертер валют
+const moneyConverter = (valNum) => {
+  const outputUan = document.querySelector("#output-uan");
+  outputUan.innerHTML = valNum * 42;
+};
+
+// 17 To Do приложение на js

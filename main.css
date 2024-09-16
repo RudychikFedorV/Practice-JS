@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .py-20 {
   padding: 20px 0;
 }
@@ -317,3 +320,103 @@
     width: 100%;
   }
 }
+
+/* 13 Прогресс бар */
+#myProgress {
+  position: relative;
+  width: 50%;
+  height: 30px;
+  background-color: #ddd;
+  margin-bottom: 20px;
+}
+#myBar {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background-color: #4caf50;
+}
+#label {
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+}
+
+/* 14 Как сделать Popup */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 80px 50px 50px;
+}
+.popup-text {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+.popup-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555;
+}
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 15 Accordion */
+button.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+button.accordion.active,
+button.accordion:hover {
+  background-color: #ddd;
+}
+div.panel {
+  padding: 0 18px;
+  background-color: #fff;
+  display: none;
+}
+div.panel.show {
+  display: block;
+}
+
+/* 17 To Do приложение на js */

@@ -197,6 +197,73 @@
             <div id="caption12"></div>
         </div>
     </div>
+
+    <!-- 13 Прогресс бар -->
+    <div class="container13 py-20">
+        <div id="myProgress">
+            <div id="myBar">
+                <div id="label">10%</div>
+            </div>
+        </div>
+        <button onclick="move()">Click me!</button>
+    </div>
+
+    <!-- 14 Как сделать Popup -->
+    <div class="container14 py-20">
+        <div class="popup" onclick="myFunction()">Click me!
+            <span class="popup-text" id="myPopup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor,
+                eligendi.
+            </span>
+        </div>
+    </div>
+
+    <!-- 15 Accordion -->
+    <div class="container15 py-20">
+        <button class="accordion">Section 1</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, doloribus!</p>
+        </div>
+        <button class="accordion">Section 2</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet doloribus!</p>
+        </div>
+        <button class="accordion">Section 3</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet!</p>
+        </div>
+    </div>
+
+    <!-- 16 Простой Конвертер валют -->
+    <div class="container16 py-20">
+        <h1>Money Converter</h1>
+        <p>
+            <label>$</label>
+            <input type="number" id="input$" placeholder="$" oninput="moneyConverter(this.value)"
+                onchange="moneyConverter(this.value)">
+        </p>
+        <p>UAH:
+            <span id="output-uan"></span>
+        </p>
+    </div>
+    <!-- 17 To Do приложение на js -->
+    <div class="container17 py-20">
+        <div id="myDiv" class="header">
+            <h2>To Do app</h2>
+            <input type="text" id="myInput" placeholder="Title">
+            <span class="addBtn" onclick="newElement()">Add</span>
+        </div>
+        <ul id="myUl">
+            <li class="cheked">Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
+            <li>Task 4</li>
+            <li>Task 5</li>
+        </ul>
+
+
+    </div>
+
+
     <script src="main.js"></script>
 </body>
 
