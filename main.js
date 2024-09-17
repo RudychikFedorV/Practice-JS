@@ -418,7 +418,7 @@ const newElement17 = () => {
     document.querySelector("#myUl17").appendChild(li);
   }
 
-  document.querySelector('#myInput17').value = ''
+  document.querySelector("#myInput17").value = "";
 
   const span = document.createElement("SPAN");
   const txt = document.createTextNode("\u00D7");
@@ -434,3 +434,28 @@ const newElement17 = () => {
     };
   }
 };
+
+// 18 Toggle Hide/Show
+function myFunction18() {
+  const myDiv = document.querySelector("#myDiv18");
+  if (myDiv.style.display === "none") {
+    myDiv.style.display = "block";
+  } else {
+    myDiv.style.display = "none";
+  }
+}
+
+// Alert
+const closeBtn = document.querySelectorAll(".closeBtn");
+let a;
+
+for (let a = 0; a < closeBtn.length; a++) {
+  const element = closeBtn[a];
+  element.onclick = function () {
+    const div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function () {
+      div.style.display = "none";
+    }, 1000);
+  };
+}

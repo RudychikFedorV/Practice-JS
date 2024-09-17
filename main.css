@@ -420,11 +420,10 @@ div.panel.show {
 }
 
 /* 17 To Do приложение на js */
-.container17 ul{
+.container17 ul {
   list-style: none;
   padding: 0;
-    margin: 0;
-
+  margin: 0;
 }
 .container17 ul li {
   cursor: pointer;
@@ -504,4 +503,48 @@ div.panel.show {
   transform: rotate(45deg);
   height: 15px;
   width: 7px;
+}
+
+/* 18 Toggle Hide/Show */
+.container18 button {
+  cursor: pointer;
+}
+#myDiv18 {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: green;
+  margin-top: 20px;
+}
+
+/* Alert */
+.cont18 .alert{
+  padding: 20px;
+  background-color: #f44336;
+  color: #fff;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+.cont18 .success{
+  background-color: #4caf50;
+}
+.cont18 .info{
+  background-color: #2196f3;
+}
+.cont18 .warning{
+  background-color: #ff9800;
+}
+.closeBtn{
+  margin-left: 15px;
+  color: #fff;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closeBtn:hover{
+  color: #000;
 }
