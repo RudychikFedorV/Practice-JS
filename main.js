@@ -379,3 +379,58 @@ const moneyConverter = (valNum) => {
 };
 
 // 17 To Do приложение на js
+const myNodeList = document.querySelectorAll(".li17");
+let i;
+for (let i = 0; i < myNodeList.length; i++) {
+  const span = document.createElement("span");
+  const txt = document.createTextNode("\u00D7");
+  span.classList = "close17";
+  span.appendChild(txt);
+  myNodeList[i].appendChild(span);
+}
+const close = document.querySelectorAll(".close17");
+let J;
+for (let j = 0; j < close.length; j++) {
+  close[j].onclick = function () {
+    const div = this.parentElement;
+    div.style.display = "none";
+  };
+}
+const list = document.querySelector("#myUl17");
+list.addEventListener(
+  "click",
+  function (ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("cheked17");
+    }
+  },
+  false
+);
+
+const newElement17 = () => {
+  const li = document.createElement("li");
+  const inputValue = document.querySelector("#myInput17").value;
+  const t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === "") {
+    alert("Поле не должно быть пустым!");
+  } else {
+    document.querySelector("#myUl17").appendChild(li);
+  }
+
+  document.querySelector('#myInput17').value = ''
+
+  const span = document.createElement("SPAN");
+  const txt = document.createTextNode("\u00D7");
+  span.classList = "close17";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  const close = document.querySelectorAll(".close17");
+  for (let j = 0; j < close.length; j++) {
+    close[j].onclick = function () {
+      const div = this.parentElement;
+      div.style.display = "none";
+    };
+  }
+};
